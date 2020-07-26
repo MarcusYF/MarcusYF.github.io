@@ -131,10 +131,10 @@ create_pages() {
 
 main() {
   init
-
   for _file in $(ls "_posts")
   do
     local _path="_posts/$_file"
+    echo $_path
     local _categories=$(read_categories "$_path")
     local _tags=$(read_tags "$_path")
 

@@ -2,7 +2,7 @@
 title: Gradient Dynamics in Supermodular Games
 author: Fan Yao
 date: 2020-06-26 11:33:00 +0800
-categories: [Blogging, Demo]
+categories: [Blogging, CS]
 tags: [Game Theory]
 math: true
 ---
@@ -41,7 +41,11 @@ $$
 \end{align}, 
 $$
 
-where \\( x, y \in [-1, 4] \\). It is a 2-player symmetric supermodular game and with a unique NE at (4, 4). However, we can easily verify that the GD starting from (-1, -1) converges to (0, 0).
+where \\( x, y \in [-1, 4] \\). It is a 2-player symmetric supermodular game and with a unique NE at (4, 4). However, we can verify that GD starting from certain points does not converge to the global unique NE, which is shown in the following figure:
+
+![Desktop View]({{ "/assets/img/matlab/gd_and_br.png" | relative_url }})
+
+, where the solid and dashed lines correspond to the gradient descent and best response dynamics, respectively. 
  
 The reason why GD has difficulties in finding the global unique NE is similar to the reason why gradient descent optimization method cannot guarantee the global minimum when optimizing a nonconvex function: it simply gets trapped at local minima. In fact, the action profile (0, 0) in this example is just like a *local* Nash equilibrium: although it does not satisfy the definition of NE, both players have no incentives to deviate unilaterally in the local region around (0, 0).  
 
@@ -61,20 +65,22 @@ To study the convergence of GD in SG, we need to introduce new solution concepts
 
 Having introduced the new solution concept LASE and DNE, Mazumdar et al.[^FindLNE] pointed out that in zero-sum game, all DNE are LASE, which implies that all DNE can be approached by some GD dynamics but GD dynamics does not  necessarily converge to DNE. To address this issue, they designed a gradient  based algorithm for zero-sum games in which the only LASE are the DNE. 
 
-Actually, Mazumdar et al.[^GDinContiGame] also summarized the convergence result for GD on continuous games, aiming to answer two questions for different classes of games. They claimed that for general games we can conclude nothing, but for some specific type of games like zero-sum games and potential games, we are able to prove some nontrivial result. The result is presented in the following table.
+Actually, Mazumdar et al.[^GDinContiGame] also summarized the convergence result for GD on continuous games, aiming to answer two questions for different classes of games. They claimed that for general games we can conclude nothing, but for some specific type of games like zero-sum games and potential games, we are able to prove some nontrivial result. The result is presented in the following table. 
 
 * Qestion 1: Are all (local) Nash equilibria also attractors of GD?
-* Qestion 2: Are all attractors of GD also (local )Nash equilibria?
+* Qestion 2: Are all attractors of GD also (local) Nash equilibria?
 
 |Class of Games|general games|zero-sum games|potential games|
 |:-:|:-:|:-:|:-:|
 |Q1| No | Yes | No |
 |Q2| No | No | Yes |
 
-![Desktop View]({{ "/assets/img/sample/mockup.png" | relative_url }})
+Interestingly, for continuous supermodular game, we are able to derive the same result as the case in potential games, that is, limit point of GD must be a local NE but there is local NE which cannot be the attractor of any GD. We will prove this result in the next post by leveraging the property of a special class of matrices.
+
 
 ## Reference
 
 [^GDinContiGame]: [**Eric Mazumdar, Lillian J Ratliff, and S Shankar Sastry. On gradient-based learning in continuousgames**](https://arxiv.org/pdf/1804.05464.pdf)
 
 [^FindLNE]: [**Eric V Mazumdar, Michael I Jordan, and S Shankar Sastry. On finding local nash equilibria (and onlylocal nash equilibria) in zero-sum games**](https://arxiv.org/pdf/1901.00838.pdf)
+
