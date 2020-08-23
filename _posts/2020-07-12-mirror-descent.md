@@ -43,4 +43,21 @@ $$
 
 [^CzechMath]: [**Miroslav Fiedler and Vlastimil Ptak. On matrices with non-positive off-diagonal elements and positiveprincipal minors.Czechoslovak Mathematical Journal**](https://dml.cz/bitstream/handle/10338.dmlcz/100526/CzechMathJ_12-1962-3_6.pdf)
 
+I want to add a new line in my family plan
+
+thanks. my account is 4342276287
+
+the number needs to be added is 4343268245
+
+account owner's name: Fan Yao
+address: 157 Yellowstone Dr. 208 Charlottesville, VA 22903
+account number: 4342276287
+pin: 2811
+the number that needs to be added in the plan: 4343268245
+IMEI 867540041671378
+
+Can I have the sim card sent to a Verizon Store for pick up
+
+I am the owner of a 4-line family plan. And I want the new line to join it and make it a 5-line family plan
+
 

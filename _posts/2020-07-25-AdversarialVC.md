@@ -27,7 +27,7 @@ First we follow the notation in the paper and revisit the standard definition of
 
 It is easy to see that \\(\sigma(\mathcal{H}, i)=\sigma'(\mathcal{F}, i)\\) if \\(\mathcal{H}\\) is a binary hypotheses class. The standard VC-dimension can thus be given by
 
-**Definition 3.** **VC-dimension** \\(VC(\mathcal{H})=\sup\{n\in\mathbb{N}:\sigma(\mathcal{H}, n)=2^n\} = \sup\{n\in\mathbb{N}:\sigma'(\mathcal{\lambda(H)}, n)=2^n\}\\), where \\(\lambda(h)= (y,c) \rightarrow \mathbb{I}(h(y) \neq c)\\).
+**Definition 3.** **VC-dimension** \\(VC(\mathcal{H})=\sup\\{n\in\mathbb{N}:\sigma(\mathcal{H}, n)=2^n\\} = \sup\\{n\in\mathbb{N}:\sigma'(\mathcal{\lambda(H)}, n)=2^n\\}\\), where \\(\lambda(h)= (y,c) \rightarrow \mathbb{I}(h(y) \neq c)\\).
 
 To derive adversarial VC-dimension, we need to define the corrupted hypotheses class that takes into account the presence of the adversary. When considering a sample \\(x \in \mathcal{X}\\) as an adversary, we assume that \\(x\\) has the freedom to deviate its feature around a region \\(x\\), where the neighbor mapping \\(N\\) is given by the binary nearness relation \\(R\\). For a binary classifier \\(h\in \mathcal{H}\\), we define the following mapping where 
 
